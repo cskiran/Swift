@@ -5,7 +5,6 @@ import { HomeSections } from '../components/home/homeSections';
 
 export const HomePageContainer = () => {
     return <>
-        <NavBar></NavBar>
         <div className="sections">
             <HomeSections />
         </div>
