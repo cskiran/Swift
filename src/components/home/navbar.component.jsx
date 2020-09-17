@@ -7,7 +7,7 @@ export const NavBar = () => {
         <div className="navbar">
             <div className="name">
                 <FcElectricity />
-                <Link to="/">Swift</Link>
+                <Link to="/" className="site-name">Swift</Link>
             </div>
         </div>
     </>

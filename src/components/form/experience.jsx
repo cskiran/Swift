@@ -40,9 +40,9 @@ export const Experience = (props) => {
         </Form.Group>
         <Button variant="outline-success" onClick={props.prevTab}>
            Back
-</Button>
+        </Button>
         <Button variant="outline-danger" onClick={props.nextTab}>
             Save & Next
-</Button>
+        </Button>
     </Form>
 }

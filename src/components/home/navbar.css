@@ -6,10 +6,14 @@
     font-weight: bolder;
     color: black;
     top: 0;
-    background: white;
+    background: rgb(31, 89, 104);
     z-index: 100;
 }
 
 .name {
     font-size: 3rem;
+}
+
+.site-name {
+    color: white;
 }

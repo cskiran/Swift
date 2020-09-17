@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
 import { Col, Nav, Row, Tab } from 'react-bootstrap';
+import { Eductaion } from '../components/form/education';
 import { Experience } from '../components/form/experience';
 import { PersonalInfo } from '../components/form/personalInfo';
+import { Skills } from '../components/form/skills';
 import './css/resumeFormContainer.css';
 
 export const ResumeFormContainer = () => {
     const [currentTab, setTab] = useState(1);
     const nextTab = () => {
-        setTab(prev => prev += prev)
+        setTab(prev => prev = prev + 1)
     }
     const prevTab = () => {
         setTab(prev => prev = prev - 1)
     }
+    const selectTab = (k) => {
+        setTab(parseInt(k));
+    }
     return <>
         <div className="form-container">
-            <Tab.Container id="left-tabs-example" defaultActiveKey={1} activeKey={currentTab} onSelect={(k) => setTab(k)}>
+            <Tab.Container id="left-tabs-example" activeKey={currentTab} onSelect={selectTab}>
                 <Row>
                     <Col sm={2}>
                         <Nav variant="pills" className="flex-column">
@@ -44,10 +49,10 @@ export const ResumeFormContainer = () => {
                                 <Experience nextTab={nextTab} prevTab={prevTab} />
                             </Tab.Pane>
                             <Tab.Pane eventKey={3}>
-                                <p>asdasdasdvwefwef</p>
+                                <Eductaion nextTab={nextTab} prevTab={prevTab} />
                             </Tab.Pane>
                             <Tab.Pane eventKey={4}>
-                                <p>asdasdasdvwefwef</p>
+                                <Skills nextTab={nextTab} prevTab={prevTab} />
                             </Tab.Pane>
                             <Tab.Pane eventKey={5}>
                                 <p>asdasdasdvwefwef</p>
